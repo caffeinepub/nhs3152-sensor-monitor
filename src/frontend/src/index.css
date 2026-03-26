@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+    /* Light mode */
+    --background: 0.97 0.005 240;
+    --foreground: 0.15 0.01 240;
+    --card: 1 0 0;
+    --card-foreground: 0.15 0.01 240;
+    --popover: 1 0 0;
+    --popover-foreground: 0.15 0.01 240;
+    --primary: 0.15 0.01 240;
+    --primary-foreground: 0.97 0.005 240;
+    --secondary: 0.93 0.005 240;
+    --secondary-foreground: 0.15 0.01 240;
+    --muted: 0.93 0.005 240;
+    --muted-foreground: 0.5 0.015 240;
+    --accent: 0.93 0.005 240;
+    --accent-foreground: 0.15 0.01 240;
+    --destructive: 0.63 0.24 27;
+    --destructive-foreground: 0.97 0 0;
+    --border: 0.88 0.008 240;
+    --input: 0.88 0.008 240;
+    --ring: 0.62 0.19 264;
+    --chart-1: 0.78 0.12 188;
+    --chart-2: 0.62 0.19 264;
+    --chart-3: 0.78 0.17 73;
+    --chart-4: 0.7 0.17 142;
+    --chart-5: 0.63 0.24 27;
+    --sidebar: 0.93 0.005 240;
+    --sidebar-foreground: 0.15 0.01 240;
+    --sidebar-primary: 0.15 0.01 240;
+    --sidebar-primary-foreground: 0.97 0.005 240;
+    --sidebar-accent: 0.88 0.008 240;
+    --sidebar-accent-foreground: 0.15 0.01 240;
+    --sidebar-border: 0.88 0.008 240;
+    --sidebar-ring: 0.62 0.19 264;
+    /* Metric accent vars */
+    --temp-accent: 0.78 0.12 188;
+    --ph-accent: 0.62 0.19 264;
+    --glucose-accent: 0.78 0.17 73;
+    --status-normal: 0.7 0.17 142;
+    --status-warning: 0.84 0.17 84;
+    --status-alert: 0.63 0.24 27;
+  }
+
+  .dark {
+    /* App BG: #0B0D10 */
+    --background: 0.12 0.008 240;
+    --foreground: 0.96 0.005 240;
+    /* Cards: #14171C */
+    --card: 0.16 0.008 240;
+    --card-foreground: 0.96 0.005 240;
+    --popover: 0.19 0.01 240;
+    --popover-foreground: 0.96 0.005 240;
+    --primary: 0.96 0.005 240;
+    --primary-foreground: 0.16 0.008 240;
+    /* Secondary sections: #1A1F26 */
+    --secondary: 0.19 0.01 240;
+    --secondary-foreground: 0.96 0.005 240;
+    --muted: 0.19 0.01 240;
+    --muted-foreground: 0.62 0.015 240;
+    --accent: 0.22 0.01 240;
+    --accent-foreground: 0.96 0.005 240;
+    --destructive: 0.63 0.24 27;
+    --destructive-foreground: 0.96 0.005 240;
+    /* Border: #2A2F37 */
+    --border: 0.26 0.01 240;
+    --input: 0.26 0.01 240;
+    --ring: 0.62 0.19 264;
+    --chart-1: 0.78 0.12 188;
+    --chart-2: 0.62 0.19 264;
+    --chart-3: 0.78 0.17 73;
+    --chart-4: 0.7 0.17 142;
+    --chart-5: 0.63 0.24 27;
+    --sidebar: 0.16 0.008 240;
+    --sidebar-foreground: 0.96 0.005 240;
+    --sidebar-primary: 0.78 0.12 188;
+    --sidebar-primary-foreground: 0.96 0.005 240;
+    --sidebar-accent: 0.19 0.01 240;
+    --sidebar-accent-foreground: 0.96 0.005 240;
+    --sidebar-border: 0.26 0.01 240;
+    --sidebar-ring: 0.62 0.19 264;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Thin scrollbars for dark panels */
+  .dark ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .dark ::-webkit-scrollbar-track {
+    background: oklch(0.16 0.008 240);
+  }
+  .dark ::-webkit-scrollbar-thumb {
+    background: oklch(0.3 0.01 240);
+    border-radius: 3px;
+  }
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: oklch(0.4 0.01 240);
+  }
+}
